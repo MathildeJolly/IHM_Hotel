@@ -1,0 +1,87 @@
+Anis Kassy – Mathilde Jolly
+Projet IHM
+Dans le cadre d’un micro-projet Interface Homme Machine nommé Hôtel numérique,
+nous avons développé en binôme deux applications liant ergonomie et fonctionnalités.
+Ce rapport a pour but de compléter et justifier notre travail.
+ Anis Kassy – Mathilde Jolly
+ 20/10/2017
+Table des matières
+I/ Résumé de la description des applications ............................................................................................ 2
+II/ Diagrammes ......................................................................................................................................... 3
+II/ Description du produit final ................................................................................................................. 7
+III/ Contraintes ........................................................................................................................................ 12
+IV/ Ergonomie des logiciels .................................................................................................................... 13
+I/ Résumé de la description des applications
+         La première application à développer est l’allocation d’une chambre d’hôtel à un client.
+L’utilisateur du logiciel est considéré comme un employé à la réception d’un hôtel. Cet employé peut
+réserver une chambre pour un client suivant le nom ou le numéro de référence de ce dernier. Si le client
+le désire, il peut demander une autre chambre. L’application lui propose alors la liste des autres chambres
+disponibles de la même catégorie. Une fois la chambre validée, l’employé peut recommencer cette
+opération si le client possède plusieurs réservations ou si un nouveau client s’adresse à lui.
+Nous nommerons cette application l’application 1.
+Nous avons réalisé l’application 1 sous la forme de l’image ci-dessous :
+La seconde application à développer est plus brève. Elle permet au gérant de l’hôtel d’obtenir des
+statistiques. Ces statistiques sont le taux d’occupation de l’hôtel pour une date donnée, le taux de non-
+présentation pour une date donnée et le taux d’occupation de l’hôtel pour une période donnée.
+Nous nommerons cette application l’application 2.
+II/ Diagrammes
+       Nous nous sommes fidèlement basés sur les diagrammes que nous avons conçus avant de
+développer les applications. Vous les retrouverez ci-dessous :
+II/ Description du produit final
+        On lance les logiciels avec la commande « make ». Les deux suivent les règles d’ergonomie
+(détaillées dans la partie IV).
+Le logiciel 1 fonctionne conformément au cahier des charges. Il faut d’abord entrer la référence ou le
+nom du client. Si la référence ou le nom du client n’est pas trouvé dans la base de données (BDD), un
+pop-up d’erreur s’affiche. On lui demande donc de saisir une nouvelle référence directement depuis le
+pop-up.
+Si l’attribution de la chambre a déjà effectué, on lui envoie un message à titre informatif.Si le nom du client est trouvé et s’il a plusieurs références, on lui demande de choisir la référence pour
+laquelle il souhaite réserver sa chambre.
+Une fois la référence trouvée dans la BDD, on lui propose une chambre disponible (non réservée à cette
+date) en fonction de la catégorie de la réservation (1, 2 ou 3).
+Si le client le souhaite, il peut demander une autre chambre disponible de cette catégorie. Une fois la
+chambre choisie, on peut la valider. Elle est réservée et devient donc indisponible pendant les dates
+réservées par le client.
+De ce fait, si un autre client veut une chambre de la même catégorie que le client précédent, il est en
+empêché. Après avoir réservé une chambre, le logiciel se réactualise en vidant toutes les informations
+saisies. Il devient possible d’effectuer de nouvelles réservations avec les autres références du client, ou
+tout simplement prendre en charge les réservations d’un nouveau client.
+Le logiciel 2 ne fonctionne pas, nous n’avons pas réussi à le réaliser, cependant nous avons fait son
+interface au moins pour avoir les points sur l’ergonomie.
+III/ Contraintes
+Le point le plus primordial de ce projet est de développer des applications ergonomiques. Nous allons
+justifier le choix de notre interface dans la partie suivante afin d’expliquer en quoi elle est ergonomique.
+Nos applications sont codées en Java suivant le modèle MVC, sont liées à une base de données
+fonctionnant avec MariaDB, sont définies par des diagrammes UML (classe, séquence, cas d’utilisation)
+et sont complétées par ce rapport.
+Les applications doivent être développées en dix-huit jours, et ce, en binôme.
+IV/ Ergonomie des logiciels
+L’interface des logiciels est simple, elles contiennent :
+     - une faible densité de l’information pour augmenter concision, homogénéité, clarté, avoir une
+         perception naturelles des composants,
+     - une fenêtre pas trop grande pour augmenter compatibilité et pilotage (au cas où l’utilisateur veut
+         effectuer d’autres tâches sans devoir réduire la fenêtre),
+     - des composants espacés avec des caractères gros pour augmenter lisibilité, faciliter l’exploration
+         de l’écran et voir rapidement les fonctionnalités disponibles,
+     - la couleur des boutons valider, confirmer en vert et quitter, changer de chambre en rouge pour
+         augmenter la signifiance (la signification des couleurs perçues sont logiques),
+     - une couleur qui apparaît sur un bouton cliqué pour augmenter la rétroaction (confirmation du
+         clic),
+     - des pop-ups de confirmation ou infirmation pour augmenter flexibilité et assistance,
+     - une barre de recherche qui gère à la fois nom et référence pour augmenter la signifiance,
+     - un bouton quitter pour augmenter l’assistance,
+     - les éléments les plus importants au centre, aucun composant dans les coins et sur les côtés pour
+         un meilleur agencement de l’écran,
+     - un contraste entre les fonds bleus et les textes blancs jouant avec la perception des couleurs par
+         l’homme pour augmenter la visibilité,
+     - pour le second logiciel ; une association de trois polices droites différentes pour chaque type
+         d’objet de l’interface,
+     - un respect du langage (cohérence, unicité du libellé des commandes...),
+     - plusieurs objets graphiques disponibles (boîte de dialogue, boutons, menu, zone de saisie),
+     - une charte graphique.
+V/ Conclusion
+Au travers de ce micro-projet, nous avons sollicité nos compétences en Java pour développer des
+applications liées à une base de données (une première pour nous) tout en traitant l’aspect ergonomique
+des interfaces. Nous avions du mal à coder par manque d’expérience, réaliser ce projet était une bonne
+révision. Nous n’avions pas de soucis de cohésion de groupe grâce à notre bonne entente. Développer
+parfois sous Windows et parfois sous Linux nous a confrontés à des soucis de compatibilités que nous
+avons finalement surmontés. Réaliser ce projet était stressant mais surtout bénéfique.
